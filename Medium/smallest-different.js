@@ -6,7 +6,7 @@ function smallestDifference(arrayOne, arrayTwo) {
   for (let i = 0; i < arrayOne.length; i++) {
     //the first loop will go through array 1
     for (let j = 0; j < arrayTwo.length; j++) {
-      //the nested loop will compare the index at array1 and get all the distances witht hat to each value in array 2
+      //the nested loop will compare the index at array1 and get all the distances with that to each value in array 2
       // in each iteration me will check the distance and if the distance is smaller then my smallest me will change the values in the array me created
       let distance = Math.abs(arrayOne[i] - arrayTwo[j]);
       if (distance < result[2]) {
