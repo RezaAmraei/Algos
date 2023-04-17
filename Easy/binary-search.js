@@ -27,3 +27,21 @@ function helper(array, target, left, right) {
     return helper(array, target, midpoint + 1, array.length - 1);
   }
 }
+
+//different solution
+
+function binarySearch2(nums, target) {
+  if (nums[0] === target) return 0;
+  const copyArr = [...nums];
+  while (nums.length > 1) {
+    console.log(nums);
+    const middle = Math.floor(nums.length / 2);
+    const middleValue = nums[middle];
+
+    if (middleValue === target) return copyArr.indexOf(middleValue);
+
+    if (middleValue > target) nums = nums.slice(0, middle);
+    else nums = nums.slice(middle);
+  }
+  return -1;
+}
